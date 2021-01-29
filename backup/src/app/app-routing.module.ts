@@ -7,11 +7,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./desk/desk.module').then( m => m.DeskPageModule)
+        loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
       },
       {
         path: ':id',
-        loadChildren: () => import('./more/more.module').then( m => m.MorePageModule)
+        loadChildren: () => import('./detailed/detailed.module').then( m => m.DetailedPageModule)
       }
     ]
   },

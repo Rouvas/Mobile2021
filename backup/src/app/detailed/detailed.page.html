@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Country - {{ cCountry.Country }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-item>
+      <ion-text>
+        Information for the entire time of the pandemic
+      </ion-text>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-text>
+        Registered: {{ cCountry.Confirmed + ' people. ' }} 
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text>
+        Recovered: {{ cCountry.Recovered + ' people. ' }}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text>
+        Deaths: {{ cCountry.Deaths + ' people. ' }} 
+      </ion-text>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-item>
+      <ion-text>
+        Information for the last day
+      </ion-text>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-item>
+      <ion-text>
+        Registered:  <ion-text *ngIf="newConfirmed > 0" >{{newConfirmed + ' people. '}}</ion-text>  <ion-text *ngIf="newConfirmed == 0" > No change </ion-text>
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text>
+        Recovered:   <ion-text *ngIf="newRecovered > 0">{{newRecovered + ' people. '}}</ion-text>  <ion-text *ngIf="newRecovered == 0" > No change </ion-text>
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text>
+        Deaths:      <ion-text *ngIf="newDeaths > 0">{{newDeaths + ' people. ' }}</ion-text> <ion-text *ngIf="newDeaths == 0" > No change </ion-text>
+      </ion-text>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
