@@ -8,7 +8,7 @@ import { HttpService } from '../services/http.service';
 })
 export class HomePage implements OnInit{
 
-  countryFilter: any = { name: '' };
+  countryFilter: any = { Country: '' };
 
   countries: any = []
 
