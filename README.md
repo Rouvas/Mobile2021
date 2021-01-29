@@ -1,7 +1,6 @@
-## Android App
+## Basic Ionic + Angular app
+* Если запускается впервый раз и Ionic не установлен
 * `npm install -g @ionic/cli`
 * `npm i`
-* `ng build`
-* `ionic capacitor copy android`
-* `npx cap update android`
-* `ionic capacitor run android`
+* `ionic serve`
+
